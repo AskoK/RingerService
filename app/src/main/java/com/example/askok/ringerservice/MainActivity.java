@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
     Button bstart, bstop;
-    private MediaPlayer mp;
+    private static MediaPlayer mp;
 
     private RingService mSensorService;
     Intent mServiceIntent;
