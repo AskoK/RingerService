@@ -45,13 +45,8 @@ public class MainActivity extends AppCompatActivity  {
             startService(mServiceIntent);
         }
 
-        //mp = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
-
         bstart = findViewById(R.id.btnstart);
         bstop = findViewById(R.id.btnstop);
-
-        //bstart.setOnClickListener(this);
-        //bstop.setOnClickListener(this);
 
         bstart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +62,6 @@ public class MainActivity extends AppCompatActivity  {
                 mp.stop();
             }
         });
-
-
-
-
-        //Intent serviceToggle = new Intent(MainActivity.this, RingService.class);
-
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -99,18 +88,4 @@ public class MainActivity extends AppCompatActivity  {
         super.onDestroy();
 
     }
-
-
-    /*
-    @Override
-    public void onClick(View view) {
-        if(view == bstart) {
-            mp.start();
-        } else if (view == bstop) {
-            mp.stop();
-            mp.reset();
-        }
-    } */
-
-
 }
