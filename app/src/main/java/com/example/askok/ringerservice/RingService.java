@@ -12,8 +12,6 @@ import java.util.TimerTask;
 
 public class RingService extends Service {
 
-    //public MediaPlayer mp = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
-
     public int counter=0;
     public RingService(Context applicationContext) {
         super();
@@ -75,43 +73,5 @@ public class RingService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
-
-    /*
-    public void startPlaying() {
-        mp.start();
-    }
-
-    public void stopPlaying() {
-        mp.stop();
-    }
-*/
-
-
-    /*
-
-    private MediaPlayer mp;
-
-    public RingService() {
-    }
-
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        mp = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
-        mp.setLooping(true);
-        mp.start();
-        return START_STICKY;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mp.stop();
-    } */
 
 }
